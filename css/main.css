@@ -60,7 +60,7 @@ body{
 
 
 /*Don't forget to add Font Awesome CSS : "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"*/
-input[type="text"] {
+input[type="text"], input[type="email"] {
   width: 100%;
   border: 2px solid #aaa;
   border-radius: 4px;
@@ -71,12 +71,12 @@ input[type="text"] {
   transition: 0.3s;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus , input[type="email"]:focus{
   border-color: dodgerBlue;
   box-shadow: 0 0 8px 0 dodgerBlue;
 }
 
-.inputWithIcon input[type="text"] {
+.inputWithIcon input[type="text"],.inputWithIcon input[type="email"] {
   padding-left: 40px;
 }
 
@@ -94,7 +94,7 @@ input[type="text"]:focus {
   transition: 0.3s;
 }
 
-.inputWithIcon input[type="text"]:focus + i {
+.inputWithIcon input[type="text"]:focus + i, .inputWithIcon input[type="email"]:focus + i {
   color: dodgerBlue;
 }
 
@@ -105,7 +105,7 @@ input[type="text"]:focus {
   border-radius: 4px 0 0 4px;
 }
 
-.inputWithIcon.inputIconBg input[type="text"]:focus + i {
+.inputWithIcon.inputIconBg input[type="text"]:focus + i ,.inputWithIcon.inputIconBg input[type="email"]:focus + i {
   color: #fff;
   background-color: dodgerBlue;
 }
@@ -213,6 +213,82 @@ input[type="text"]:focus {
 
 
 
+/* ESTILOS CUENTA REGRESIVA */
+
+#timedown{
+  text-align: center;
+  margin: 20px;
+  width: 21em;
+  background: linear-gradient(0deg, rgba(56,56,56,1) 0%, rgba(75,75,75,1) 30%, rgba(126,140,154,1) 100%);
+  color: #ddd;
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#timedown div {
+  font-weight: bold;
+  font-size: 30px;
+  padding:5px 10px;
+  display: inline;
+}
+
+#timedown .text{
+  font-weight: normal;
+  font-size: 15px;
+  display: block;
+}
+
+#timedown .days, #timedown .hours, #timedown .minuts{
+  border-right: 1px solid #383838;
+  
+}
+
+.timedown-out{
+  animation-duration: 3s;
+  animation-name: out;
+}
+
+
+.time-over{
+  font-size: 18px !important;
+  margin: 20px;
+  right:0px;
+  font-family: 'Open Sans', sans-serif;
+  animation-duration: 5s;
+  animation-name: up;
+}
+
+
+
+
+@keyframes up {
+  0% {
+  margin-top:200px;
+
+  }
+  100% {
+  margin-top: 0;
+
+  }
+}
+
+@keyframes out{
+  0% {
+    margin-top:0;
+  
+    }
+    100% {
+    margin-top: -50%;
+  
+    }
+}
+
+
+/* FIN ESTILOS CUENTA REGRESIVA */
+
+
 
 
 /* MEDIA QUERYS */
@@ -227,15 +303,11 @@ input[type="text"]:focus {
     }   
 }
 
-/* @media only screen and (max-width: 1000px){
-  .main-header .pruebita {
-    height:600px;
-    background-color: aqua;
+@media only screen and (max-width: 1400px){
+  #timedown {
+    margin-left: -15px;
   } 
-  .main-header .row .pruebita{
-    background-color: aqua;
-  }
-} */
+}
 
 @media only screen and (max-width: 1000px){
   .group-form-1{
@@ -341,6 +413,18 @@ input[type="text"]:focus {
     padding-left:160px;
   }
 
+  #timedown{
+    width: 63%;
+    padding-right: 340px;
+  }
+
+  #main{
+    margin-left: 70px;
+  }
+  
+  .group-form-1{
+    height: 680px;
+  }
 
 }
 

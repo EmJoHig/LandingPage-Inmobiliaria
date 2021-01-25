@@ -31,38 +31,41 @@
             <div class="col-lg-6">
               <div class="container">
                 <div class="row group-form-1">
-                  <div class="col-lg-12 text-center" style="background-color: rgba(0, 0, 0, 0.487); height: 110%;">
+                  <div class="col-lg-12 text-center" style="background-color: rgba(0, 0, 0, 0.487); height: 120%;">
                     <p style="color:rgb(255, 255, 255);text-align: center;">Tu confianza es nuestra responsabilidad</p>
                     <p style="text-align: center;">CONOCÉ EL VALOR DE TU PROPIEDAD 100% GRATIS </p>
                     <P style="color: #ffd900;font-weight: bold;text-align: center;">
                       ¡Registrate y un profesional inmobiliario se contactará con vos, para realizar una tasación online!
                     </P>
-                    <form name="registro" enctype="text/plain">
+                    <form id="idFormularioRegistro" name="registro" enctype="text/plain">
                       <div class="input-group mb-3">
                         <div class="inputWithIcon">
-                          <input type="text" placeholder="Tu nombre" name="nombre" id="idnombreForm1">
+                          <input type="text" placeholder="Tu nombre" name="nombre" id="idnombreForm1" required>
                           <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
                         </div>
                       </div>
                       <div class="input-group mb-3">
                         <div class="inputWithIcon">
-                          <input type="text" placeholder="Tu Email" name="email" id="idemailForm1">
+                          <input type="email" placeholder="Tu Email" name="email" id="idemailForm1" required>
                           <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
                         </div>
                       </div>
                       <div class="input-group mb-3">
                         <div class="inputWithIcon">
-                          <input type="text" placeholder="Tu Teléfono" name="telefono" id="idtelefonoForm1">
+                          <input type="text" placeholder="Tu Teléfono" name="telefono" id="idtelefonoForm1" required>
                           <i class="fa fa-phone  fa-lg fa-fw" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <button type="submit" class="btn btn-danger btn-lg btn-block" style="width: 100%;" onclick="obtenerdatos(idnombreForm1,idemailForm1,idtelefonoForm1)">
+                      <button type="submit" class="btn btn-danger btn-lg btn-block" style="width: 100%;">
                         <h3 style="font-size: 100%;">QUIERO CONOCER EL VALOR DE MI PROPIEDAD GRATIS!</h3>
                         <h4 style="font-size: 90%;">
                             Solo quedan 20 cupones disponibles!
                         </h4>
                     </button>
                     </form>
+                    <div class="" style="margin-top: 20px; padding-left: 100px;">
+                      <div id="main"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -186,61 +189,7 @@
 
     <!-- TERCER SECCION -->
     
-      <section class="main-header" style="height:700px">
-        <div class="background-overlay text-white py-5">
-          <div class="container">
-            <div class="row d-flex h-100">
-              <div class="col-lg-6 text-center justify-content-center align-self-center">
-                <h1 style="margin-bottom: 30%;color:rgb(255, 255, 255); color: black;">
-                  Tasación de Inmuebles
-                </h1>
-              </div>
-              <div class="col-lg-6">
-                <div class="container">
-                  <div class="row group-form-1">
-                    <div class="col-lg-12 text-center" style="background-color: rgba(0, 0, 0, 0.487); height: 110%;">
-                      <p style="color:rgb(255, 255, 255);text-align: center;">Tu confianza es nuestra responsabilidad</p>
-                      <p style="text-align: center;">CONOCÉ EL VALOR DE TU PROPIEDAD 100% GRATIS </p>
-                      <P style="color: gold;font-weight: bold;text-align: center;">
-                        ¡Registrate y un profesional inmobiliario se contactará con vos, para realizar una tasación online!
-                      </P>
-                      <form name="registro" enctype="text/plain">
-                        <div class="input-group mb-3">
-                          <div class="inputWithIcon">
-                            <input type="text" placeholder="Tu nombre" name="nombre" id="idnombreForm2">
-                            <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                        <div class="input-group mb-3">
-                          <div class="inputWithIcon">
-                            <input type="text" placeholder="Tu Email" name="email" id="idemailForm2">
-                            <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                        <div class="input-group mb-3">
-                          <div class="inputWithIcon">
-                            <input type="text" placeholder="Tu Teléfono" name="telefono" id="idtelefonoForm2">
-                            <i class="fa fa-phone  fa-lg fa-fw" aria-hidden="true"></i>
-                          </div>
-                        </div>
-                        <button type="submit" class="btn btn-danger btn-lg btn-block" style="width: 100%;" onclick="obtenerdatos(idnombreForm2,idemailForm2,idtelefonoForm2)">
-                          <h3 style="font-size: 100%;">QUIERO CONOCER EL VALOR DE MI PROPIEDAD GRATIS!</h3>
-                          <h4 style="font-size: 90%;">
-                              Solo quedan 20 cupones disponibles!
-                          </h4>
-                      </button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-
-    <!-- REPEAT HEADER FORMULARIO -->
     <section class="text-center bg-light">
       <div class="container" style="padding-top: 50px;padding-bottom: 50px;">
         <div class="row">
@@ -335,58 +284,7 @@ Con solo tener la propiedad en el sitio web de una inmobiliaria no alcanza. la g
 
     <!-- REPEAT HEADER FORMULARIO -->
 
-    <section class="main-header" style="height:700px">
-      <div class="background-overlay text-white py-5">
-        <div class="container">
-          <div class="row d-flex h-100">
-            <div class="col-lg-6 text-center justify-content-center align-self-center">
-              <h1 style="margin-bottom: 30%;color:rgb(255, 255, 255); color: black;">
-                Tasación de Inmuebles
-              </h1>
-            </div>
-            <div class="col-lg-6">
-              <div class="container">
-                <div class="row group-form-1">
-                  <div class="col-lg-12 text-center" style="background-color: rgba(0, 0, 0, 0.487); height: 110%;">
-                    <p style="color:rgb(255, 255, 255);text-align: center;">Tu confianza es nuestra responsabilidad</p>
-                    <p style="text-align: center;">CONOCÉ EL VALOR DE TU PROPIEDAD 100% GRATIS </p>
-                    <P style="color: gold;font-weight: bold;text-align: center;">
-                      ¡Registrate y un profesional inmobiliario se contactará con vos, para realizar una tasación online!
-                    </P>
-                    <form name="registro" enctype="text/plain">
-                      <div class="input-group mb-3">
-                        <div class="inputWithIcon">
-                          <input type="text" placeholder="Tu nombre" name="nombre" id="idnombreForm3">
-                          <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                      <div class="input-group mb-3">
-                        <div class="inputWithIcon">
-                          <input type="text" placeholder="Tu Email" name="email" id="idemailForm3">
-                          <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                      <div class="input-group mb-3">
-                        <div class="inputWithIcon">
-                          <input type="text" placeholder="Tu Teléfono" name="telefono" id="idtelefonoForm3">
-                          <i class="fa fa-phone  fa-lg fa-fw" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                      <button type="submit" class="btn btn-danger btn-lg btn-block" style="width: 100%;" onclick="obtenerdatos(idnombreForm3,idemailForm3,idtelefonoForm3)">
-                        <h3 style="font-size: 100%;">QUIERO CONOCER EL VALOR DE MI PROPIEDAD GRATIS!</h3>
-                        <h4 style="font-size: 90%;">
-                            Solo quedan 20 cupones disponibles!
-                        </h4>
-                    </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  
 
     <!-- FOOTER -->
     <section class="sixth-section py-5">
@@ -432,43 +330,101 @@ Con solo tener la propiedad en el sitio web de una inmobiliaria no alcanza. la g
     </footer>
 
 
-    <!-- BOOTSTRAP SCRIPTS -->
+<!-- BOOTSTRAP SCRIPTS -->
+<script src="./js/main.js"></script>
 
-    <!-- MAIL -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
+<!-- MAIL -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 
-      function obtenerdatos(idnombre,idemail,idtelefono)
-        {
-          var nombre = idnombre.value;
-          var mail = idemail.value;
-          var telefono= idtelefono.value;
-          
-          // var nombre = document.getElementById(idnombreForm).value;
-          // var mail = document.getElementById(idemailForm).value;
-          // var telefono = document.getElementById(idtelefonoForm).value;
+<script>
+
+$(document).ready(function(){
+
+    
+  $("#idFormularioRegistro").submit(function( event ) {
+  event.preventDefault();
+  var nombre = $("#idnombreForm1").val();
+  var mail = $("#idemailForm1").val();
+  var telefono = $("#idtelefonoForm1").val();
+
+  var idNombre = document.getElementById('idnombreForm1').id;
+  var idEmail = document.getElementById('idemailForm1').id;
+  var idTelefono = document.getElementById('idtelefonoForm1').id;
+
+  let validacion = ValidacionFormulario(nombre,mail,telefono,idNombre,idEmail,idTelefono)
+    if (validacion){        
+        const resultadoSEndMAil = Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "emanuel.higuera9@gmail.com",
+                    Password: "nocxxfilvbaiojlu",
+                    //PARA QUIEN
+                    To: 'emanuel.higuera@hotmail.com',
+                    //DE
+                    From: "emanuel.higuera9@gmail.com",
+                    Subject: "PEDIDO FORMULARIO",
+                    Body: `<h3 style='font-weight: bold;'>Nombre: <span style='font-weight: normal;'>${nombre}</span><h3/> 
+                          <h3 style='font-weight: bold;'>Email: <span style='font-weight: normal;'>${mail}</span><h3/>
+                          <h3 style='font-weight: bold;'>Teléfono: <span style='font-weight: normal;'>${telefono}<span/><h3/>              
+                          `                 
+                  }).then(function(result){
+                    //console.log(result);
+                    alert(result); 
+                  }).catch(function(e) {
+                      alert(e); 
+                      }).then(function(e){
+                        alert(e);
+                        //alert('after a catch the chain is restored');
+                      }, function (e) {
+                        alert(e);
+                        //alert('Not fired due to the catch');
+                      });
+      window.location.href="/thankyou.html";
+    }
+
+  });
 
 
-          Email.send({
-              Host: "smtp.gmail.com",
-              Username: "emanuel.higuera9@gmail.com",
-              Password: "nocxxfilvbaiojlu",
-              To : 'emanuel.higuera9@gmail.com',
-              From : "emanuel.higuera9@gmail.com",
-              Subject : "PEDIDO FORMULARIO",
-              Body: `<h3 style='font-weight: bold;'>Nombre: <span style='font-weight: normal;'>${nombre}</span><h3/> 
-                     <h3 style='font-weight: bold;'>Email: <span style='font-weight: normal;'>${mail}</span><h3/>
-                     <h3 style='font-weight: bold;'>Teléfono: <span style='font-weight: normal;'>${telefono}<span/><h3/> 
-                      
-                    `
-            }).then(
-              message => alert("MAIL ENVIADO SATISFACTORIAMENTE!!!")
-            );
+
+});
+
+
+  function ValidacionFormulario(nombre,correo,telefono, idnombre,idcorreo,idtelefono){
+
+    if(nombre=="" || nombre==null){
+        
+      $('#' + idnombre).css("box-shadow", "0 0 8px 0 red");
+      return false;
+    }else{
+          var expresion= /^[,\\.\\a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]*$/;
+          if(!expresion.test(nombre)){
+            $('#' + idnombre).css("box-shadow", "0 0 8px 0 red");
+             return false;
+          }
         }
-    </script>
+     
+        if(correo=="" || correo==null){
+          $('#' + idnombre).css("box-shadow", "0 0 8px 0 green");
+          $('#' + idcorreo).css("box-shadow", "0 0 8px 0 red");
+          return false;
+        }
 
+        if(telefono=="" || telefono==null){
+          $('#' + idnombre).css("box-shadow", "0 0 8px 0 green");
+          $('#' + idcorreo).css("box-shadow", "0 0 8px 0 green");
+          $('#' + idtelefono).css("box-shadow", "0 0 8px 0 red");
+          return false;
+        }
+
+      $('#' + idnombre).css("box-shadow", "0 0 8px 0 green");
+      $('#' + idcorreo).css("box-shadow", "0 0 8px 0 green");
+      $('#' + idtelefono).css("box-shadow", "0 0 8px 0 green");
+
+      return true;
+  }
+
+    </script>
   </body>
 </html>
