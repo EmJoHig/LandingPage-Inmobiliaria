@@ -56,7 +56,7 @@
                           <i class="fa fa-phone  fa-lg fa-fw" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <button type="submit" class="btn btn-danger btn-lg btn-block" style="width: 100%;">
+                      <button type="submit" class="btn btn-danger btn-lg btn-block" style="width: 100%;" onclick="EnvioMailFormulario(event)">
                         <h3 style="font-size: 100%;">QUIERO CONOCER EL VALOR DE MI PROPIEDAD GRATIS!</h3>
                         <h4 style="font-size: 90%;">
                             Solo quedan 20 cupones disponibles!
@@ -65,6 +65,26 @@
                     </form>
                     <div class="" style="margin-top: 20px; padding-left: 100px;">
                       <div id="main"></div>
+                    </div>
+                    <div class="modal fade" id="idLoadingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content container" style="width: 70%; height: 130%;">
+                          <!-- <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div> -->
+                          <div class="modal-body">
+                            <div class="spinner-border text-primary" role="status">
+                              <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <h3 style="color: #000;">Cargando...</h3>
+                          </div>
+                          <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div> -->
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -181,7 +201,6 @@
           </div>
         </div>
       </div>
-
       <br>
       <br>
     </section>
@@ -230,43 +249,49 @@
     <section class="fourth-section text-center p-5">
       <div class="row">
         <div class="accordion" id="accordionExample">
+
           <div class="card">
             <div class="card-header" id="headingOne">
               <h5 class="mb-0">
-                <button class="btn" style="font-weight: bold;" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="btn" style="font-weight: bold;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   PUBLICACIÓN
                 </button>
               </h5>
             </div>
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
+              <div class="collapse p-3" id="collapseExample">
                 Es muy importante en este punto las fotos, es necesario contar con un fotografo profesional que pueda tomar imagenes de alta calidad, con la luz, el foco y la altura adecuada. Mantener un ambiente ordenado y despersonalizado es fundamental.
               </div>
             </div>
           </div>
+
           <div class="card">
             <div class="card-header" id="headingTwo">
               <h5 class="mb-0">
-                <button class="btn btncollapsed" style="font-weight: bold;" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="btn" style="font-weight: bold;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                   GESTIÓN
                 </button>
               </h5>
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
-                Vender una propiedad no es tarea fácil, pero tampoco imposible. El problema para muchos incluso antes de tomar la decisión, es el proceso que hay que atravesar hasta firmar el último papel. Sin embargo, estos “pasos a seguir” no son tan complicados como parece.
-
-Sabemos que, una vez tomada la decisión de vender, aparecen las dudas acerca de la documentación que hay que presentar. Pero también muchas personas se preguntan, entre otros factores, cuántos interesados habrá y cómo será el proceso una vez que aparezca un posible comprador.
-
-Con solo tener la propiedad en el sitio web de una inmobiliaria no alcanza. la gestión representa el mayor porcentaje de valor para un resultado exitoso.
+            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="collapse p-3" id="collapseExample2">
+                Vender una propiedad no es tarea fácil, pero tampoco imposible. El problema para muchos incluso antes de tomar la
+                decisión, es el proceso que hay que atravesar hasta firmar el último papel. Sin embargo, estos “pasos a seguir” no son
+                tan complicados como parece.
+                
+                Sabemos que, una vez tomada la decisión de vender, aparecen las dudas acerca de la documentación que hay que presentar.
+                Pero también muchas personas se preguntan, entre otros factores, cuántos interesados habrá y cómo será el proceso una
+                vez que aparezca un posible comprador.
+                
+                Con solo tener la propiedad en el sitio web de una inmobiliaria no alcanza. la gestión representa el mayor porcentaje de
+                valor para un resultado exitoso.
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
 
     <hr>
     <!-- QUINTA SECCION  -->
@@ -280,11 +305,7 @@ Con solo tener la propiedad en el sitio web de una inmobiliaria no alcanza. la g
     </section>
     <hr>
     
-
-
     <!-- REPEAT HEADER FORMULARIO -->
-
-  
 
     <!-- FOOTER -->
     <section class="sixth-section py-5">
@@ -336,94 +357,87 @@ Con solo tener la propiedad en el sitio web de una inmobiliaria no alcanza. la g
 <!-- MAIL -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 <script>
 
-$(document).ready(function(){
+function EnvioMailFormulario(ev){
+    ev.preventDefault();
+    var nombre = $("#idnombreForm1").val();
+    var mail = $("#idemailForm1").val();
+    var telefono = $("#idtelefonoForm1").val();
+     
+    let validacion = ValidacionFormulario(nombre,mail,telefono);
 
-    
-  $("#idFormularioRegistro").submit(function( event ) {
-  event.preventDefault();
-  var nombre = $("#idnombreForm1").val();
-  var mail = $("#idemailForm1").val();
-  var telefono = $("#idtelefonoForm1").val();
-
-  var idNombre = document.getElementById('idnombreForm1').id;
-  var idEmail = document.getElementById('idemailForm1').id;
-  var idTelefono = document.getElementById('idtelefonoForm1').id;
-
-  let validacion = ValidacionFormulario(nombre,mail,telefono,idNombre,idEmail,idTelefono)
-    if (validacion){        
+    if (validacion){
+        LoadingModal();
         const resultadoSEndMAil = Email.send({
-                    Host: "smtp.gmail.com",
-                    Username: "emanuel.higuera9@gmail.com",
-                    Password: "nocxxfilvbaiojlu",
-                    //PARA QUIEN
-                    To: 'emanuel.higuera@hotmail.com',
-                    //DE
-                    From: "emanuel.higuera9@gmail.com",
-                    Subject: "PEDIDO FORMULARIO",
-                    Body: `<h3 style='font-weight: bold;'>Nombre: <span style='font-weight: normal;'>${nombre}</span><h3/> 
-                          <h3 style='font-weight: bold;'>Email: <span style='font-weight: normal;'>${mail}</span><h3/>
-                          <h3 style='font-weight: bold;'>Teléfono: <span style='font-weight: normal;'>${telefono}<span/><h3/>              
-                          `                 
-                  }).then(function(result){
-                    //console.log(result);
-                    alert(result); 
-                  }).catch(function(e) {
-                      alert(e); 
-                      }).then(function(e){
-                        alert(e);
-                        //alert('after a catch the chain is restored');
-                      }, function (e) {
-                        alert(e);
-                        //alert('Not fired due to the catch');
-                      });
-      window.location.href="thankyou.html";
+                      SecureToken : "57589d04-c7a2-4fc9-9fc5-e90bf05c3f43",
+                      //PARA QUIEN
+                      To: 'yimmytoxic@gmail.com',
+                      //DE
+                      From: "emanuel.higuera9@gmail.com",
+                      Subject: "PEDIDO FORMULARIO",
+                      Body: `<h3 style='font-weight: bold;'>Nombre: <span style='font-weight: normal;'>${nombre}</span><h3/> 
+                            <h3 style='font-weight: bold;'>Email: <span style='font-weight: normal;'>${mail}</span><h3/>
+                            <h3 style='font-weight: bold;'>Teléfono: <span style='font-weight: normal;'>${telefono}<span/><h3/>              
+                            `               
+        }).then(function(){       
+          window.location.href="/thankyou.html";
+        });
     }
-
-  });
-
+  }
 
 
-});
+  function LoadingModal(){
+    var myModal = document.getElementById('idLoadingModal');
+    $('#idLoadingModal').modal('show');
+  }
 
+  function ValidacionFormulario(nombre,correo,telefono){
 
-  function ValidacionFormulario(nombre,correo,telefono, idnombre,idcorreo,idtelefono){
-
-    if(nombre=="" || nombre==null){
-        
-      $('#' + idnombre).css("box-shadow", "0 0 8px 0 red");
+    if(nombre=="" || nombre==null){    
+      $("#idnombreForm1").css("box-shadow", "0 0 8px 0 red");
       return false;
     }else{
           var expresion= /^[,\\.\\a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]*$/;
           if(!expresion.test(nombre)){
-            $('#' + idnombre).css("box-shadow", "0 0 8px 0 red");
+            $("#idnombreForm1").css("box-shadow", "0 0 8px 0 red");
              return false;
           }
         }
      
         if(correo=="" || correo==null){
-          $('#' + idnombre).css("box-shadow", "0 0 8px 0 green");
-          $('#' + idcorreo).css("box-shadow", "0 0 8px 0 red");
+          $("#idnombreForm1").css("box-shadow", "0 0 8px 0 green");
+          $("#idemailForm1").css("box-shadow", "0 0 8px 0 red");
           return false;
+        }
+        else{
+          if (!emailIsValid(correo))
+            return false;
         }
 
         if(telefono=="" || telefono==null){
-          $('#' + idnombre).css("box-shadow", "0 0 8px 0 green");
-          $('#' + idcorreo).css("box-shadow", "0 0 8px 0 green");
-          $('#' + idtelefono).css("box-shadow", "0 0 8px 0 red");
+          $("#idnombreForm1").css("box-shadow", "0 0 8px 0 green");
+          $("#idemailForm1").css("box-shadow", "0 0 8px 0 green");
+          $("#idtelefonoForm1").css("box-shadow", "0 0 8px 0 red");
           return false;
         }
 
-      $('#' + idnombre).css("box-shadow", "0 0 8px 0 green");
-      $('#' + idcorreo).css("box-shadow", "0 0 8px 0 green");
-      $('#' + idtelefono).css("box-shadow", "0 0 8px 0 green");
+      $("#idnombreForm1").css("box-shadow", "0 0 8px 0 green");
+      $("#idemailForm1").css("box-shadow", "0 0 8px 0 green");
+      $("#idtelefonoForm1").css("box-shadow", "0 0 8px 0 green");
 
       return true;
   }
+
+
+  function emailIsValid (email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  }
+
 
     </script>
   </body>
