@@ -317,6 +317,9 @@ input[type="text"]:focus , input[type="email"]:focus{
     /* width:150%; */
   } 
 
+  .inputWithIcon input[type="email"] {
+    padding-left: 70px;
+  }
 
   .header-img img{
     width: 50%;
@@ -349,7 +352,7 @@ input[type="text"]:focus , input[type="email"]:focus{
   }
 
   #idheader-main{
-    min-height: 1100px;
+    min-height: 1200px;
   }
 
   .inputWithIcon input[type="text"] {
@@ -423,8 +426,12 @@ input[type="text"]:focus , input[type="email"]:focus{
   }
   
   .group-form-1{
-    height: 680px;
+    height: 740px;
   }
+
+  /* .main-header .col-lg-12{
+    height: 10px;
+  } */
 
 }
 
