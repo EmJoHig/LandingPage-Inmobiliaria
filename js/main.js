@@ -41,6 +41,6 @@ const getRemainTime = deadline => {
     }, 1000)
   }
   
-  countDown('Feb 01 2021 21:50:30 GMT-0500', 'main', '<div class="time-over" style="font-size:xx-large; float:left">El tiempo se ha acabado</div>')
+  countDown('Apr 30 2021 21:50:30 GMT-0500', 'main', '<div class="time-over" style="font-size:xx-large; float:left">El tiempo se ha acabado</div>')
   
   
