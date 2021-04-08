@@ -168,7 +168,7 @@ input[type="text"]:focus , input[type="email"]:focus{
 
 
 .fifth-section{
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
   font-size: x-large;
   padding-left: 40px;
@@ -290,8 +290,54 @@ input[type="text"]:focus , input[type="email"]:focus{
 
 
 
+.last-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.last-section img{
+  width: 40%;
+}
+
+.last-section .contenedor-textos-main{
+  width: 40%;
+}
+
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 80px 0;
+    /* margin-top: 80px; */
+}
+
+.parrafo{
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+
+.last-section .contenedor-textos-main2{
+  width: 60%;
+}
+
+.contenedor2{
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: auto;
+  padding: 0 0 80px 0;
+  /* margin-top: 80px; */
+}
+
 
 /* MEDIA QUERYS */
+
 
 
 @media only screen and (max-width: 700px){
@@ -349,6 +395,7 @@ input[type="text"]:focus , input[type="email"]:focus{
 
   .main-header{
     min-height: 990px;
+    height: 1900px;
   }
 
   #idheader-main{
@@ -433,5 +480,76 @@ input[type="text"]:focus , input[type="email"]:focus{
     height: 10px;
   } */
 
+
+  .info-last .last-section img{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .last-section .contenedor-textos-main{
+    width: 98%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .last-section .contenedor-textos-main p{
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .last-section .contenedor-textos-main>h2{
+    text-align: center;
+    font-size: 70px;
+  }
+
+
+/* sjdkajs */
+
+.last-section .contenedor-textos-main2{
+  width: 98%;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
+.last-section .contenedor-textos-main2 p{
+  text-align: center;
+  font-size: 40px;
+}
+
+.last-section .contenedor-textos-main2>h2{
+  text-align: center;
+  font-size: 70px;
+}
+
+
+.contenedor-textos-main2 .titulo{
+  margin-top: 100px;
+}
+
+.fifth-section p{
+  font-size: 40px;
+}
+
+
+.main-header .background-overlay .container .row .col-lg-6>h1{
+  font-size: 60px;
+}
+  
+
+.group-form-1{
+  font-size: 50px;
+  height: 100%;
+}
+
+.main-header button{
+  font-size: 40px;
+}
+
+
+
+}
+
+
+
 
