@@ -15,7 +15,7 @@ body{
   position: relative;
   background: url(../img/agente6.jpg);
   background-size: cover;
-  /* min-height 700px; */
+  height: 900px;
 }
 
 .background-overlay {
@@ -537,7 +537,7 @@ input[type="text"]:focus , input[type="email"]:focus{
 }
   
 
-.group-form-1{
+.group-form-1{ 
   font-size: 50px;
   height: 100%;
 }
@@ -547,9 +547,4 @@ input[type="text"]:focus , input[type="email"]:focus{
 }
 
 
-
 }
-
-
-
-
